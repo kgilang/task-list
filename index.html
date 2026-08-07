@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Task List</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Task List</span>
+      </div>
+      <ul>
+        <li class="active">
+          <a href="index.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <header>
+        <div class="header-left">
+          <button id="btnSidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="header-title">
+            <h2 id="headerTitle">Halo, User 👋</h2>
+            <p id="headerSubtitle">Selamat datang kembali</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <input id="search" type="search" placeholder="Cari task..." autocomplete="off">
+          <button id="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+          </button>
+        </div>
+      </header>
+      <section class="cards">
+        <div class="card blue">
+          <h2 id="totalTask">0</h2>
+          <p>Total Task</p>
+        </div>
+        <div class="card orange">
+          <h2 id="progressTask">0</h2>
+          <p>In Progress</p>
+        </div>
+        <div class="card green">
+          <h2 id="doneTask">0</h2>
+          <p>Done</p>
+        </div>
+        <div class="card red">
+          <h2 id="delayTask">0</h2>
+          <p>Delayed</p>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="panel">
+          <h3>
+            <i class="fa-solid fa-chart-pie"></i>
+            Status Overview
+          </h3>
+          <div class="chart-container">
+            <canvas id="statusChart"></canvas>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>
+            <i class="fa-solid fa-calendar-days"></i>
+            Calendar
+          </h3>
+          <div id="calendar"></div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="panel">
+          <h3>
+            <i class="fa-solid fa-fire"></i>
+            High Priority
+          </h3>
+          <div id="priorityList"></div>
+        </div>
+        <div class="panel">
+          <h3>
+            <i class="fa-solid fa-list-check"></i>
+            Recent Task
+          </h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Due Date</th>
+              </tr>
+            </thead>
+            <tbody id="taskTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+
+  <div id="toast"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button id="modalClose" class="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="modalBody" class="modal-body">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/task.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Task List</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <h1>Task List</h1>
+      <p class="subtitle">
+        Masukkan PIN untuk melanjutkan
+      </p>
+      <form id="loginForm">
+        <div class="pin-group">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+          <input class="pin" type="password" maxlength="1" inputmode="numeric" autocomplete="off">
+        </div>
+        <button id="btnLogin" type="submit">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Login
+        </button>
+        <div id="message"></div>
+      </form>
+    </div>
+  </div>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+    <span>Memproses...</span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
